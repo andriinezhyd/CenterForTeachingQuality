@@ -1,0 +1,44 @@
+-var bodyClass= "logged-in";
+include pug/common/_head
+	block content
+		include pug/common/_header
+		main#main
+			section.title-dashboard(style="background: #f9a020;")
+				.container-fluid
+					.row.justify-content-center
+						.col-md-10
+							.title.text-center.text-uppercase: span MY dashboard
+			.container-fluid.js-ajax-filters(data-dashboard="true")
+				.row.justify-content-center
+					.col-10.col-md-12
+						nav.ajax-load(data-filter)
+							ul.filter-button-list
+								li(data-category="01").active: a.btn.btn-lg.btn-primary.btn-outline-primary(href="#") All Posts
+								li(data-category="02"): a.btn.btn-lg.btn-primary.btn-outline-primary(href="#") My Curated Feed
+								li(data-category="03"): a.btn.btn-lg.btn-primary.btn-outline-primary(href="#") My Pinned Posts
+						.content(data-load)
+							.container-load(data-current="2" data-pages="20")
+								.row.justify-content-center.justify-content-md-start
+									-for(var i = 1; i <= 12; i++)
+										.col-md-6.col-12
+											+blogItem({
+												imgName: 'avatar.jpg',
+												datetime: '2017-07-07',
+												time: '07/07/17',
+												name: 'by John Holland',
+												description: 'Why this effective and passionate teacher is leaving the classroom (for now)'
+											})
+					.col-12.d-flex.justify-content-center
+						nav.navigation.pagination(data-href="inc/dashboard1.html")
+							.navigation-comments#demo
+								//- a.prev.page-numbers(href='#') « Previous
+								//- a.page-numbers(href='inc/content1.html') 1
+								//- a.page-numbers(href='inc/content1.html') 2
+								//- a.page-numbers(href='inc/dashboard1.html') 3
+								//- a.page-numbers(href='inc/dashboard2.html') 4
+								//- a.page-numbers(href='inc/dashboard3.html') 5
+								//- a.page-numbers(href='inc/dashboard2.html') 6
+								//- a.page-numbers(href='inc/dashboard1.html') 7
+								//- a.next.page-numbers(href='#') Next »
+			include pug/template/_subscribe
+		include pug/common/_footer

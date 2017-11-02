@@ -1,0 +1,408 @@
+input[type='search']::-webkit-search-decoration,
+input[type='search']::-webkit-search-cancel-button,
+input[type='search']::-webkit-search-results-button,
+input[type='search']::-webkit-search-results-decoration {
+  display: none;
+}
+
+input[type='search'] {
+  -webkit-appearance: none;
+}
+
+input[type=number],
+input[type='text'],
+input[type='file'],
+input[type='password'],
+input[type='submit'],
+input[type='email'],
+input[type='tel'],
+textarea {
+  -webkit-border-radius: 0;
+  -webkit-appearance: none;
+  border-radius: 0;
+  outline: none;
+
+  .wpcf7 & {
+    width: 100%;
+  }
+}
+
+input[type='email'] {
+  box-shadow: none;
+  -webkit-box-shadow: none;
+}
+
+input[type='image'] {
+  padding: 0;
+  border: none;
+}
+
+input[type='submit']::-moz-focus-inner,
+input[type='button']::-moz-focus-inner,
+button::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+input[type='submit']:focus,
+input[type='button']:focus {
+  outline: none;
+}
+
+form {
+  input:not([type='submit']),
+  textarea {
+    font-size: 14px;
+    line-height: 18px;
+    background: $input-bg;
+    color: $input-color;
+    border-color: $input-border-color;
+    border-width: 2px;
+    border-style: solid;
+    border-radius: $input-border-radius;
+    padding: rem-calc(14) rem-calc(20);
+
+    &:focus {
+      border: 2px solid $input-focus-border-color;
+      background: $input-focus-bg;
+      outline: none;
+    }
+
+    &:hover {
+      border-color: $input-focus-border-color;
+    }
+
+    &:not(textarea) {
+      height: rem-calc(50);
+    }
+
+    @include placeholder {
+      color: $black;
+    }
+  }
+}
+
+textarea {
+  height: 80px;
+  min-height: 80px;
+  max-height: 300px;
+}
+
+input[type='submit'],
+button {
+  cursor: pointer;
+}
+
+div.wpcf7 {
+  padding-top: rem-calc(30);
+
+  @include media('≥tablet') {
+    padding-top: rem-calc(80);
+  }
+
+  input[type='submit'] {
+    display: block;
+    width: auto;
+    font-size: rem-calc(14);
+    line-height: 18px;
+    font-weight: $normal;
+    padding: rem-calc(14);
+  }
+
+  .wpcf7-list-item-label {
+    font-size: rem-calc(15);
+    line-height: 18px;
+  }
+
+  label {
+    margin-bottom: rem-calc(3);
+    font-weight: $bold;
+    color: $black;
+    text-transform: uppercase;
+  }
+
+  .wpcf7-form-control.wpcf7-radio {
+    display: block;
+
+    .wpcf7-list-item {
+      margin-left: 0;
+      margin-bottom: rem-calc(15);
+      display: block;
+    }
+  }
+
+  .row-form {
+    position: relative;
+  }
+
+  .ajax-loader {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin: rem-calc(10) 0 0 rem-calc(-8);
+  }
+
+  .wpcf7-validation-errors {
+    border-color: $yellow;
+  }
+
+  .wpcf7-mail-sent-ok {
+    border-color: $blue;
+    background: $blue-light;
+    color: $white;
+  }
+
+  .wpcf7-not-valid-tip {
+    color: $yellow;
+  }
+}
+
+.form-section {
+  margin-bottom: rem-calc(30);
+
+  label {
+    text-transform: uppercase;
+    margin-bottom: rem-calc(3);
+    font-weight: $bold;
+    color: $black;
+  }
+}
+
+.row-form {
+  @extend %clearfix;
+  margin-bottom: rem-calc(15);
+
+  >.col-form {
+    float: right;
+    width: 100%;
+
+    @include media('≥tablet') {
+      width: 49%;
+    }
+
+
+    &:first-child {
+      float: left;
+      margin-bottom: 15px;
+
+      @include media('≥tablet') {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  .radio-class {
+    .wpcf7-list-item {
+      display: flex;
+      margin-bottom: 15px;
+      align-items: center;
+      justify-content: flex-end;
+      flex-direction: row-reverse;
+    }
+  }
+
+  .textarea {
+    display: block;
+    line-height: 0;
+  }
+}
+
+.section-profile {
+  padding-top: 4px;
+  color: $black;
+  font-size: rem-calc(14);
+  line-height: 18px;
+
+  .box-form {
+    + .box-form {
+      margin-top: rem-calc(36);
+    }
+
+    .row {
+      margin-bottom: rem-calc(18);
+    }
+  }
+
+  .btn {
+    font-size: rem-calc(14);
+    line-height: 18px;
+  }
+
+  .btn-lg {
+    padding-top: rem-calc(14);
+    padding-bottom: rem-calc(14);
+  }
+
+  .btn-wrap {
+    padding: rem-calc(29) 0;
+    margin-bottom: rem-calc(11);
+    border-top: 7px solid $light-gray;
+  }
+
+  textarea,
+  input {
+    width: 100%;
+  }
+
+  textarea {
+    height: rem-calc(126);
+    min-height: rem-calc(126);
+  }
+
+  label {
+    font-weight: $bold;
+    margin: 0;
+
+    @include media('≥tablet') {
+      margin: 15px 0;
+    }
+
+    &.label-avatar {
+
+      @include media('≥tablet') {
+        margin-top: 0;
+      }
+    }
+  }
+
+  h3 {
+    padding-bottom: 2px;
+    margin-bottom: 18px;
+    color: $black;
+    font-weight: $bold;
+    text-transform: uppercase;
+    font-size: rem-calc(22);
+    line-height: 26px;
+  }
+
+  .description {
+    display: block;
+    padding: rem-calc(7) rem-calc(13);
+    margin-bottom: rem-calc(10);
+    letter-spacing: 1px;
+  }
+
+  .profile-photo {
+    margin-bottom: rem-calc(20);
+  }
+
+  .checkbox-list {
+    padding: rem-calc(19) 0 rem-calc(8);
+
+    li {
+      margin-bottom: rem-calc(21);
+    }
+
+    label {
+      position: relative;
+      padding-left: rem-calc(31);
+      font-weight: $normal;
+      letter-spacing: 0.05em;
+      margin: 0;
+
+      &:before {
+        position: absolute;
+        left: 0;
+        top: -2px;
+        margin: 0 !important;
+      }
+    }
+  }
+
+  .btn-lg {
+    min-width: rem-calc(270);
+  }
+
+  input[type='submit'] {
+    width: auto;
+  }
+
+  .btn-group {
+    display: block;
+
+    .btn {
+      display: block;
+
+      + .btn {
+        margin-top: rem-calc(15);
+      }
+    }
+
+    + #user_pass {
+      margin-top: rem-calc(15);
+    }
+  }
+}
+
+.response-message {
+  margin-bottom: rem-calc(5);
+
+  .modal & {
+    color: $white;
+
+    a {
+      color: inherit;
+      text-decoration: underline;
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+.wysija-msg {
+  display: flex;
+  align-items: center;
+  width: 100%;
+
+  div {
+    width: 100%;
+  }
+
+  .error {
+    ul:not([class]) {
+      color: inherit;
+      margin: rem-calc(5) 0;
+
+      li {
+        padding-left: 0;
+        text-align: center;
+
+        &:before {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+
+.form-404 {
+  form {
+    display: flex;
+
+    input[type='search'] {
+      width: calc(100% - 60px);
+    }
+
+    [type='submit'] {
+      display: block;
+      text-align: center;
+      border: 2px solid $brand-primary;
+      width: 60px;
+      height: rem-calc(50);
+      line-height: 50px;
+      font-size: 20px;
+      color: $white;
+      border-radius: 0;
+      background: $brand-primary;
+      outline: none;
+
+      &:hover {
+        color: $brand-primary;
+        background: $white;
+      }
+    }
+  }
+}

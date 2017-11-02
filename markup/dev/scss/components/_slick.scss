@@ -1,0 +1,26 @@
+.recent_blog_posts {
+
+	.slick-prev,
+	.slick-next {
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		z-index: 1;
+		font-size: rem-calc(25);
+		color: $white;
+		transition: color 0.3s;
+
+		&:hover {
+			cursor: pointer;
+			color: $blue-dark;
+		}
+	}
+
+	.slick-prev {
+		left: rem-calc(-10);
+	}
+
+	.slick-next {
+		right: rem-calc(-10);
+	}
+}

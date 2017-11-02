@@ -1,0 +1,390 @@
+// #main {
+//  @extend %clearfix;
+// }
+
+#content {
+  margin-bottom: rem-calc(30);
+
+  @include media('≥tablet') {
+    float: left;
+    width: 70%;
+    margin-bottom: rem-calc(73);
+  }
+
+  &:only-child {
+    float: none;
+    width: 100%;
+  }
+}
+
+.widget {
+  @extend %clearfix;
+  margin-bottom: $widget-margin;
+
+  select {
+    min-width: 150px;
+  }
+}
+
+.search-form,
+.post-password-form {
+  @extend %clearfix;
+
+  label {
+    display: block;
+  }
+
+  p {
+    @extend %clearfix;
+  }
+
+  input {
+    float: left;
+    margin-right: 5px;
+
+    @include media('<phone') {
+      width: 100%;
+    }
+
+    #sidebar & {
+      @include media('≥tablet') {
+        width: 100%;
+        margin: 0 0 5px;
+      }
+    }
+
+    &[type='submit'] {
+      height: rem-calc(50);
+      display: block;
+      max-width: rem-calc(151);
+      width: 100%;
+      color: $white;
+      font-weight: $normal;
+      font-size: rem-calc(16);
+      line-height: 19px;
+      background: #401608;
+      padding: rem-calc(11) rem-calc(10) rem-calc(12);
+      text-align: center;
+      border: 0;
+      outline: none;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+
+      @include media('<phone') {
+        margin-top: 10px;
+      }
+
+      &:hover {
+        background: $black;
+        border-color: $black;
+      }
+    }
+  }
+}
+
+.nav-links,
+.navigation,
+.navigation-comments {
+  position: relative;
+  vertical-align: middle;
+  margin: 3px -5px 17px;
+  font-size: 0;
+  line-height: 0;
+  letter-spacing: -4px;
+
+  .screen-reader-text {
+    position: absolute;
+    left: -99999px;
+  }
+
+  .page-numbers {
+    font-size: rem-calc(16);
+    line-height: 20px;
+    letter-spacing: 0;
+    margin: 0 5px;
+    display: inline-block;
+    vertical-align: middle;
+    color: $yellow;
+
+    &:hover,
+    &.current,
+    &.active {
+      color: #abadb0;
+    }
+  }
+
+  .next,
+  .prev {
+    width: 35px;
+    text-align: center;
+    overflow: hidden;
+    font-size: 0;
+    line-height: 0;
+    cursor: pointer;
+
+    &:hover {
+      &:before {
+        color: #abadb0;
+      }
+    }
+
+    &:before {
+      position: relative;
+      font-size: 14px;
+      line-height: 20px;
+      font-family: $font-ico;
+      color: $yellow;
+    }
+  }
+
+  .next {
+    &:before {
+      content: '\e91c';
+    }
+  }
+
+  .prev {
+    &:before {
+      content: '\e91e';
+    }
+  }
+}
+
+.navigation-single {
+  margin-bottom: $vertical-rhythm;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+
+  .next,
+  .prev {
+    max-width: 49%;
+    display: flex;
+    align-items: center;
+    color: $btn-default-color;
+    font-weight: $btn-font-weight;
+
+
+    > a {
+      display: flex;
+      align-items: center;
+      padding: rem-calc(6) rem-calc(5);
+      color: $yellow;
+      font-weight: $btn-font-weight;
+      border-radius: $btn-border-radius-base;
+      border: 2px solid $yellow;
+      background: transparent;
+      font-size: rem-calc(13);
+      text-transform: uppercase;
+
+      &:hover {
+        background: rgba(242, 242, 242, 0.75);
+      }
+    }
+  }
+}
+
+.navigation-single {
+  justify-content: space-between;
+  align-items: stretch;
+
+  .next,
+  .prev {
+    padding: 0;
+    margin: 0;
+    max-width: 49%;
+    display: flex;
+    align-items: center;
+    border: 0;
+  }
+}
+
+.comment-form {
+  label {
+    display: block;
+    padding-bottom: 4px;
+  }
+
+  input,
+  textarea {
+    margin: 0 4px 0 0;
+    width: 100%;
+
+    @include media('≥tablet') {
+      max-width: 300px;
+    }
+
+    &[type='submit'] {
+      height: rem-calc(50);
+      display: block;
+      width: auto;
+      color: $white;
+      font-weight: $normal;
+      font-size: rem-calc(16);
+      line-height: 19px;
+      background: #401608;
+      padding: rem-calc(11) rem-calc(10) rem-calc(12);
+      text-align: center;
+      border: 0;
+      outline: none;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+
+      @include media('<phone') {
+        margin-top: 10px;
+      }
+
+      &:hover {
+        background: $black;
+        border-color: $black;
+      }
+    }
+  }
+
+  textarea {
+    overflow: auto;
+    margin: 0;
+    height: 120px;
+    min-height: 120px;
+  }
+}
+
+.commentlist {
+  margin: 0 0 1.2em;
+
+  .edit-link {
+    margin: 0;
+  }
+
+  .avatar-holder {
+    float: left;
+    max-width: rem-calc(48);
+    margin: 0 1.2em 4px 0;
+  }
+}
+
+.commentlist-item {
+  .commentlist-item {
+    padding: 0;
+    @include media('≥tablet') {
+      padding: 0 0 0 2em;
+    }
+  }
+}
+
+.comment,
+.commentlist-holder {
+  overflow: hidden;
+}
+
+.commentlist-item .commentlist-item,
+.commentlist-item + .commentlist-item {
+  padding-top: 20px;
+}
+
+.widget_calendar {
+  th,
+  td {
+    text-align: center;
+  }
+
+  #prev {
+    text-align: left;
+  }
+
+  #next {
+    text-align: right;
+  }
+}
+
+#wp-calendar {
+  width: 100%;
+}
+
+.wp-caption {
+  max-width: 100%;
+  clear: both;
+  border: $wp-caption-border;
+  padding: 4px;
+  margin-bottom: 20px;
+  text-align: center;
+
+  img {
+    margin-bottom: 4px;
+  }
+
+  p {
+    margin: 0;
+  }
+}
+
+.aligncenter {
+  margin: 0 auto $vertical-rhythm;
+}
+
+img {
+  &.aligncenter {
+    display: block;
+    margin: 0 auto;
+  }
+}
+
+.alignleft {
+  display: block;
+  margin: 0 0 20px;
+
+  @include media('≥phone') {
+    float: left;
+    margin: 0 1.2em 20px 0;
+  }
+
+  @include media('≥tablet') {
+    margin: 0 1.2em 4px 0;
+  }
+}
+
+.alignright {
+  display: block;
+  margin: 0 0 20px;
+
+  @include media('≥phone') {
+    float: right;
+    margin: 0 0 20px 1.2em;
+  }
+
+  @include media('≥tablet') {
+    margin: 0 0 4px 1.2em;
+  }
+}
+
+.mejs-container {
+  margin-bottom: $vertical-rhythm;
+}
+
+.wp-caption-text,
+.gallery,
+.alignnone,
+.gallery-caption,
+.sticky,
+.bypostauthor {
+  height: auto;
+}
+
+.gallery {
+  .gallery-item {
+    padding: 0 10px;
+
+    dt {
+      float: none;
+      width: 100%;
+      margin: 0 0 10px;
+      padding: 0;
+    }
+  }
+}
+
+iframe {
+  display: block;
+  max-width: 100%;
+}

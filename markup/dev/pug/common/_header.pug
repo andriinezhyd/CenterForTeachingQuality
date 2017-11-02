@@ -1,0 +1,43 @@
+header#header
+	.panel-header
+		//- include social
+		include ../template/_social
+		ul.btn-box
+			li: a.btn.btn-warning(href="#", data-toggle='modal', data-target='.register') JOIN
+			li: a.btn.btn-danger(href="#", data-toggle='modal', data-target='.login') SIGN IN
+		a.login-item(href="#"): span.icon-user
+	.bar-header
+		nav.navbar.navbar-expand-md
+			a.navbar-brand(href='index.html')
+				img.logo(src="images/logo.svg", alt="Center For Teaching Quality", width="233", height="65")
+				img.logo-sticky(src="images/logo-small.svg", alt="Center For Teaching Quality", width="47", height="25")
+			#navbar.navbar-collapse.mob-menu
+				a.nav-opener-mob(href="#"): span opener
+				.mob-drop
+					.hold
+						.open-search
+							.slide
+								form
+									input.form-control(type='search', placeholder='Search...')
+									button(type='submit'): span.icon-search
+							a.opener(href='#'): span.icon-search
+						.main-menu
+							a.nav-opener(href="#"): span opener
+							.nav-drop
+								ul.login-menu
+									li: a(href="#") LOGOUT
+									li: a(href="#") MY PROFILE
+									li: a(href="#") MY DASHBOARD
+								ul.navbar-nav.ml-auto
+									li: a(href="about.html") ABOUT CTQ
+									li: a(href="our-work.html") OUR WORK
+									li: a(href="our-services.html") OUR SERVICES
+									li: a(href="blog.html", style="color: #f9a020; font-weight: 700;") BLOG
+						ul.menu-panel
+							li: a(href="#") DONATE
+							li: a(href="#") CONTACT
+							li: a(href="#") CAREERS
+						address.address.md-hidden
+							span: a(href="tel:9199133000") (919) 913 3000
+							span: a(href="mailto:contactus@teachingquality.com") contactus@teachingquality.com
+							span 605 West Main St., Suite 207 Carrboro, NC 27510

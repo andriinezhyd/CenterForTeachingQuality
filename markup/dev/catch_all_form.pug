@@ -1,0 +1,72 @@
+include pug/common/_head
+	block content
+		include pug/common/_header
+		main#main
+			.title-section.min-height-flex(style="background-image:url(images/bg-title-section.jpg)")
+				.height-flex.min-height-175
+					.container-fluid
+						.row.justify-content-center
+							.col-10.col-md-12
+								.text-box
+									h2 Catch All Template
+			.ctq-section
+				.img-decor
+					img(src="images/img-decor01.png", alt="image description")
+				.container-fluid
+					.row.justify-content-center
+						.col-10
+							.text.text-left
+								p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in repre.
+			section.content-section
+				.container-fluid
+					.row.justify-content-center
+						.col-10
+							#content
+								h4 Consectetur adipisicing elit.
+								p Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+								h4 Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+								p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+								ul
+									li Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+									li Accusantium doloremque laudantium, totam rem aperiam
+									li Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+								p Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+								.wpcf7
+									form.wpcf7-form(action='#', enctype='multipart/form-data')
+										.column-form
+											.row-form
+												.col-form
+													span.wpcf7-form-control-wrap.TextField
+														input.wpcf7-form-control.wpcf7-text.text-field-class.wpcf7-use-title-as-watermark(type='text', name='TextField', placeholder='First name')
+												.col-form
+													span.wpcf7-form-control-wrap.TextField
+														input.wpcf7-form-control.wpcf7-text.text-field-class.wpcf7-use-title-as-watermark(type='text', name='TextField', placeholder='Last name')
+											.row-form
+												label If we were able to resolve related challenges and opportunities fully, we would experience:
+												span.wpcf7-form-control-wrap.textarea
+													textarea.wpcf7-form-control.wpcf7-textarea.textarea-class.wpcf7-use-title-as-watermark(name='textarea', cols='10', rows='4')
+											.row-form
+												label The main reason we haven’t yet made the change we want to create is:
+												span.wpcf7-form-control-wrap.textarea
+													textarea.wpcf7-form-control.wpcf7-textarea.textarea-class.wpcf7-use-title-as-watermark(name='textarea', cols='10', rows='4')
+											.row-form
+												span.wpcf7-form-control-wrap.Emailfield
+													input.wpcf7-form-control.wpcf7-text.wpcf7-email.wpcf7-validates-as-required.wpcf7-validates-as-email.email-class.wpcf7-use-title-as-watermark(type='email', name='Emailfield', placeholder='Email address')
+											.row-form
+												label Ready to start the conversation? Tell us how you want to be contacted:
+												span.wpcf7-form-control-wrap.radio
+													span.wpcf7-form-control.wpcf7-radio.radio-class
+														span.wpcf7-list-item
+															input(type='radio', name='radio', value='One', checked)
+															span.wpcf7-list-item-label Email
+														span.wpcf7-list-item
+															input(type='radio', name='radio', value='Two')
+															span.wpcf7-list-item-label Phone
+											.row-form
+												span.wpcf7-form-control-wrap.TextField
+													input.wpcf7-form-control.wpcf7-text.text-field-class.wpcf7-use-title-as-watermark(type='text', name='TextField', placeholder='Phone number')
+											.row-form.d-flex.justify-content-center
+												input.btn.btn-lg.btn-primary.wpcf7-form-control.wpcf7-submit.submit-class(type='submit', value='submit')
+											.wpcf7-response-output.wpcf7-display-none
+			include pug/template/_subscribe
+		include pug/common/_footer

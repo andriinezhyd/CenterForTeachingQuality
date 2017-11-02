@@ -1,0 +1,44 @@
+:not(#foo) > input[type="checkbox"] {
+  display: none;
+
+  + label {
+    cursor: pointer;
+    position: relative;
+
+    &:before {
+      display: inline-block;
+      content: '';
+      width: 20px;
+      height: 20px;
+      border: 3px solid $yellow;
+      border-radius: 50%;
+      transition: all 0.2s linear;
+      margin: 0 8px -4px 2px;
+
+      .checkbox-modal & {
+        width: rem-calc(10);
+        height: rem-calc(10);
+        border: 2px solid $white;
+        border-radius: 0;
+        margin: rem-calc(1) rem-calc(8) 0 0;
+      }
+
+      .checkbox-wrap & {
+        margin-left: 0;
+        margin-bottom: rem-calc(-5);
+        position: absolute;
+        left: 0;
+      }
+    }
+  }
+
+  &:hover {
+    + label:before {
+      background: $blue;
+    }
+  }
+
+  &:checked + label:before {
+    background: #ffbf64;
+  }
+}

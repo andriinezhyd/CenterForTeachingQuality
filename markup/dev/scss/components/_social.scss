@@ -1,0 +1,26 @@
+.social {
+  @extend %listreset;
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: rem-calc(-5);
+
+  li {
+    margin: 0 rem-calc(10) rem-calc(5) 0;
+
+    @include media('≥desktop') {
+      margin-right: rem-calc(20);
+    }
+  }
+
+  a {
+    color: $white;
+    display: block;
+    line-height: 0;
+    font-size: rem-calc(24);
+    transition: color 0.3s;
+
+    &:hover {
+      color: $yellow;
+    }
+  }
+}

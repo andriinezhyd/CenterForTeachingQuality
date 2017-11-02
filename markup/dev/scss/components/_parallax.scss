@@ -1,0 +1,43 @@
+.parallax-section {
+  overflow: hidden;
+}
+
+.bg-holder {
+  min-height: rem-calc(563);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  width: 100%;
+  padding-top: rem-calc(20);
+  padding-bottom: rem-calc(20);
+
+  .subscribe & {
+    min-height: rem-calc(224);
+
+    @include media('<phone') {
+      min-height: rem-calc(260);
+    }
+  }
+
+  img {
+    height: auto;
+    position: absolute;
+    width: 100%;
+  }
+
+  .text-box {
+    color: $white;
+  }
+
+  .btn-group {
+    flex-wrap: wrap;
+  }
+
+  .btn {
+    margin-bottom: rem-calc(20);
+  }
+}
+
+.is-touch-device {
+  background-size: cover;
+}

@@ -1,0 +1,96 @@
+.btn {
+  text-transform: uppercase;
+  line-height: 1;
+  font-family: $base-font-sans-serif;
+  font-size: rem-calc(13);
+  white-space: normal;
+  cursor: pointer;
+
+  &.btn-outline-warning {
+    color: $yellow;
+
+    &:focus {
+      box-shadow: none;
+    }
+  }
+
+  &.btn-outline-light {
+    color: $white;
+    border-color: $white;
+
+    &:hover {
+      color: $yellow;
+    }
+
+    &:focus {
+      box-shadow: none;
+    }
+  }
+
+  &:hover {
+    background: rgba(242, 242, 242, 0.75);
+  }
+
+  &.focus,
+  &:focus {
+    box-shadow: none;
+  }
+}
+
+.btn-primary {
+  &:hover {
+    color: $brand-primary;
+  }
+
+  &.btn-outline-primary {
+    color: $brand-primary;
+    background: none;
+
+    &:hover {
+      color: $white;
+      background: $brand-primary;
+    }
+  }
+}
+
+.btn-warning {
+  color: $white;
+}
+
+.btn-lg {
+  min-width: rem-calc(320);
+
+  @include media('<phone') {
+    min-width: 100%;
+    width: 100%;
+  }
+}
+
+.btn-group {
+  width: 100%;
+
+  @include media('<phone') {
+    display: block;
+  }
+
+  .btn {
+    margin-right: rem-calc(31);
+
+    + .btn {
+      margin-left: 0;
+    }
+  }
+}
+
+.btn-sm,
+.btn-group-sm > .btn {
+  line-height: 16px;
+  padding: rem-calc(6) rem-calc(5);
+  min-width: rem-calc(120);
+}
+
+.btn-md {
+  line-height: 16px;
+  padding: rem-calc(10) rem-calc(5) rem-calc(12);
+  min-width: rem-calc(131);
+}

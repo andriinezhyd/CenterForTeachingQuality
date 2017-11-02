@@ -1,0 +1,53 @@
+.modal.fade.create(tabindex='-1', role='dialog', aria-hidden='true')
+	button.close(type='button', data-dismiss='modal'): span.icon-close
+	.modal-dialog.modal-md
+		.modal-content
+			.container
+				.title-form.text-center
+					h3 MY INFORMATION
+				form.create-form(action="#")
+					.form-group
+						input(type="email", placeholder="Email Address From Previous Page")
+					.row
+						.col-md-6
+							.form-group
+								input(type="text", placeholder="First Name")
+						.col-md-6
+							.form-group
+								input(type="text", placeholder="Last Name")
+						.col-md-6
+							.form-group
+								input(type="text", placeholder="Organization")
+						.col-md-6
+							.form-group
+								input(type="text", placeholder="ZIP")
+					.form-group
+						select
+							option Current Role
+							option Current Role-1
+							option Current Role-2
+							option Current Role-3
+					.row-text.checkbox-wrap
+						h4 Connect me with opportunities and resources (related) to:
+						ul.checkbox-list
+							li
+								input#create-01(type="checkbox" name="create")
+								label(for="create-01") Create or strengthen collectively-led schools or programs
+							li
+								input#create-02(type="checkbox" name="create")
+								label(for="create-02") Assess the impact of work educators are leading together
+							li
+								input#create-03(type="checkbox" name="create")
+								label(for="create-03") Design or strengthen teacher leadership roles,<br> pathways or systems
+							li
+								input#create-04(type="checkbox" name="create")
+								label(for="create-04") Increase effectiveness of virtual learning communities
+							li
+								input#create-05(type="checkbox" name="create")
+								label(for="create-05") Share educators’ stories of impact
+					.row.justify-content-center
+						.col-md-6
+							.form-group
+								button.btn.btn-warning.text-no-uppercase(type="submit") Create Account
+					.footer.txt-wrap
+						a(href="#") By signing up you agree to CTQ’s Terms of Service

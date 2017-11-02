@@ -1,0 +1,209 @@
+include pug/common/_head
+	block content
+		include pug/common/_header
+		main#main(role="main")
+			// parallax-section
+			.start-section.parallax-section
+				.bg-holder
+					img(src="images/img-parallax01.jpg" alt="image description")
+					.container-fluid
+						.row.justify-content-center
+							.col-10.col-md-12
+								.text-box
+									p Ignite the change our education system needs.
+									.btn-row.btn-group
+										a.btn.btn-lg.btn-outline-warning(href="#") call to action for school systems
+										a.btn.btn-lg.btn-outline-warning(href="#") call to action to view services
+			// title-section
+			.title-section.min-height-flex(style="background-image:url(images/bg-title-section.jpg)")
+				.height-flex.min-height-175
+					.container-fluid
+						.row.justify-content-center
+							.col-10.col-md-12
+								.text-box
+									h2 Our Team
+			.container
+				h1.h1-type1 H1 Libre Franklin for Landing Page Titles
+				h2.h2-type1 H2 for landing pagesMr Eaves
+				h3 H3 Bold  Libre Franklin teacher leadership for equity andadministrators
+				h4 H4 Libre Franklin Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+				h5 H5 Libre Franklin Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+				h6 H6 Libre Franklin Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+				p.sub-title.text-primary Mr Eaves XL Mod OT - Book 32px / 40px line height <br> Excerpt text styling lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+				p.text-larger.text-primary  Impact text Here are five specific actions that administrators can take to cultivate these conditions—so they can leverage teacher leadership to create more ambitious outcomes for all students:
+				p
+					strong.strong-text Strong Text / Bold  Define teacher leadership broadly
+				p Teacher leadership encompasses everything from supporting administrative functions and mentoring novices to coaching peers and facilitating PLCs—roles and tasks that are readily assigned by administrators. But teacher leadership has to be about much more in order to truly achieve equity and excellence. Teachers are not going to teach in ways that empower their students if they don’t have the opportunity to lead their own learning, and the tools and time required to do so.
+				ul
+					li Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit  esse cillum dolore eu fugiat nulla pariatur.
+					li Accusantium doloremque laudantium, totam rem aperiam
+					li Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+				ol.custom-number-list
+					li Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+					li Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim  veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit sse cillum dolore eu fugiat nulla pariatur.
+					li Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+				p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+				blockquote.blockquote.text-primary
+					p.mb-0 Mr Eaves XL Mod OT  cupidatat non proident, sunt in culpa qui officia deserunt mollit anim est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+				p text text
+					a(href="#") link in text
+				p.h4.text-danger Form Fields
+					form
+						.form-group
+								input.form-control(type="text" placeholder ="Organization")
+						.form-group
+								input(type="text" placeholder ="Organization")
+				p.h4.text-danger check box
+					form(action="#")
+						input(type="checkbox" name="" id="a")
+						label(for="a") label1
+			.title-section.min-height-flex(style="background-image:url(images/bg-title-section.jpg)")
+				.height-flex.min-height-175
+					.container-fluid
+						.row.justify-content-center
+							.col-10.col-md-11
+								.text-box
+									span.ico: img(src="images/support-white.svg", alt="image description")
+									p Support Collective Leadership
+			.ctq-section
+				.img-decor
+					img(src="images/img-decor01.png", alt="image description")
+				.container-fluid
+					.row.justify-content-center
+						.col-md-10
+							.text.text-left
+								p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia.
+			include pug/template/_call-to-action
+			include pug/template/_call-to-action-img
+			include pug/template/_subscribe
+			.block-posts
+				.container-fluid
+					.title-row.orange
+						h1 our funders
+				.container-fluid
+					.row.justify-content-center.justify-content-lg-start
+						.col-10.col-md-9.col-lg-6
+							+postItem({
+								tag: 'Arthur Vining Davis',
+								description: 'The Arthur Vining Davis Foundations based in Jacksonville, Florida are a national philanthropic organization established through the generosity of the late American Industrialist, Arthur Vining Davis.'
+							})
+						.col-10.col-md-9.col-lg-6
+							+postItem({
+								tag: 'Bill & Melinda Gates Foundation',
+								description: 'Our United States Division works to improve U.S. high school and postsecondary education and support vulnerable children and families in Washington State. Our approach to grantmaking in all four areas emphasizes collaboration, innovation, risk-taking, and, most importantly, results.'
+							})
+			section.blog-section
+				.container-fluid
+					.title-row.yellow
+						i.title-decor
+						h1 RELATED BLOG POSTS
+					.row.blog-wrap.justify-content-center
+						.col-md-6.col-lg-4.col-10
+							+blogItem({
+								datetime: '2017-07-07',
+								time: '07/07/17',
+								name: 'by John Holland',
+								description: 'Why this effective and passionate teacher is leaving the classroom (for now)'
+							})
+						.col-md-6.col-lg-4.col-10
+							+blogItem({
+								datetime: '2017-07-07',
+								time: '07/07/17',
+								name: 'by John Holland',
+								description: 'Why this effective and passionate teacher is leaving the classroom (for now)'
+							})
+						.col-md-6.col-lg-4.col-10
+							+blogItem({
+								datetime: '2017-07-07',
+								time: '07/07/17',
+								name: 'by John Holland',
+								description: 'Why this effective and passionate teacher is leaving the classroom (for now)'
+							})
+						.col-md-6.col-lg-4.col-10
+							+blogItem({
+								datetime: '2017-07-07',
+								time: '07/07/17',
+								name: 'by John Holland',
+								description: 'Why this effective and passionate teacher is leaving the classroom (for now)'
+							})
+						.col-md-6.col-lg-4.col-10
+							+blogItem({
+								datetime: '2017-07-07',
+								time: '07/07/17',
+								name: 'by John Holland',
+								description: 'Why this effective and passionate teacher is leaving the classroom (for now)'
+							})
+						.col-md-6.col-lg-4.col-10
+							+blogItem({
+								datetime: '2017-07-07',
+								time: '07/07/17',
+								name: 'by John Holland',
+								description: 'Why this effective and passionate teacher is leaving the classroom (for now)'
+							})
+			section.blog-section
+				.container-fluid
+					.title-row.blue
+						i.title-decor
+						h1 FROM THE BLOG
+					.row.blog-wrap.justify-content-center
+						.col-md-6.col-10
+							+blogItem({
+								imgName: 'avatar.jpg',
+								datetime: '2017-07-07',
+								time: '07/07/17',
+								name: 'by John Holland',
+								description: 'Why this effective and passionate teacher is leaving the classroom (for now)'
+							})
+						.col-md-6.col-10
+							+blogItem({
+								imgName: 'avatar.jpg',
+								datetime: '2017-07-07',
+								time: '07/07/17',
+								name: 'by John Holland',
+								description: 'Why this effective and passionate teacher is leaving the classroom (for now)'
+							})
+			.links-block
+				.container-fluid
+					.row.justify-content-md-center.justify-content-lg-start
+						.col-md-9.col-lg-6
+							+blockLink({
+								href: 'about-clients.html',
+								tag: 'our funders',
+								description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, duis aute irure dolor.'
+							})
+						.col-md-9.col-lg-6
+							+blockLink({
+								tag: 'OUR CLIENTS',
+								description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, duis aute irure dolor.'
+							})
+						.col-md-9.col-lg-6
+							+blockLink({
+								tag: 'OUR PARTNERS',
+								description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, duis aute irure dolor.'
+							})
+						.col-md-9.col-lg-6
+							+blockLink({
+								tag: 'OUR BOOKS',
+								description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, duis aute irure dolor.'
+							})
+
+			.container-fluid
+				ul.list-item
+					-for( var i = 1; i <= 5; i++ )
+						li
+							.item
+								a(href="#")
+									.avatar: img(src="images/avatar-01.jpg", alt="image description")
+									span.name John Holland
+									span.career Teacher
+			section.story(style="background-image:url(images/bg-story-01.jpg)")
+				.container-fluid.hold
+					.row.justify-content-center.justify-content-lg-start
+						.col-10.col-lg-6
+							.title
+								span.tag.decor-line-2.line-white FEATURED STORY
+								h2: a(href="#") Collaborating for change.
+							.body
+								p What happens when a school's teachers and administrators come together to solve a problem and improve learning for all students?
+							a.btn.btn-sm.btn-outline-warning(href="#") READ MORE
+			include pug/common/_footer

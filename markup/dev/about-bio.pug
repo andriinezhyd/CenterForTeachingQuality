@@ -1,0 +1,57 @@
+include pug/common/_head
+	block content
+		include pug/common/_header
+		main#main
+			.title-section.min-height-flex(style="background-image:url(images/bg-title-section.jpg)")
+				.height-flex.min-height-175
+					.container-fluid
+						.row.justify-content-center
+							.col-10.col-md-12
+								.text-box
+									h2 Barnett Berry
+			section.bio-section
+				.container-fluid
+					.row.justify-content-center
+						.col-10
+							.avatar.alignright
+								img(src="images/avatar-02.jpg", alt="image description")
+							h3 CEO &amp; Partner
+							.contact
+								p @ CTQ since… 1998 (CTQ’s very first day of business)
+								p: a(href="mailto:bberry@teachingquality.org")
+									span.icon-mail
+									| bberry@teachingquality.org
+								include pug/template/_social
+							h4 What I do
+							p I think, write, and take action on the future of the profession that makes all other possible.
+							h4 Experience
+							p Barnett’s insights on the teaching profession are grounded in a career that has positioned him to analyze education policy and practice from a rich range of perspectives. He is a former high school social studies teacher, think tank analyst, senior state education agency leader, and university professor. In the mid-1990s, he served as a research consultant to the National Commission on Teaching & America's Future in developing its seminal report, What Matters Most: Teaching for America’s Future, and later led its state policy and partnership efforts. This work led to his founding of CTQ in 1998.
+							p Barnett has authored more than 100 peer-reviewed journal articles and book chapters. His research and analysis has focused on policies to advance the teaching profession, spanning from teacher recruitment and preparation to how teaching effectiveness is evaluated and rewarded.
+							p Barnett’s first book, TEACHING 2030: What We Must Do for Our Students and Our Public Schools… Now and in the Future (2011), was crafted with the wisdom of twelve expert teachers and outlines a potent vision for the future of teaching. Teacherpreneurs: Innovative Teachers Who Lead But Don't Leave(2013) details the contours of a bold brand of teacher leadership. He blogs at Advancing the Teaching Profession and regularly publishes in the popular education press.
+							h4 Why CTQ?
+							p Our nation’s policymakers must shift their focus from firing “bad teachers” to building on the expertise of the many excellent ones teaching today. If America is going to ensure high quality education for all its students, then we must spread the pedagogical and policy expertise of teachers.
+							h4 Something fun
+							ul.list
+								li I’m a relentless advocate for the teaching profession.
+								li I’m deeply committed to family and friends.
+								li I’m addicted to hot yoga.
+							h4 Three favorite professional reads
+							ul.list
+								li The Flat World and Education by Linda Darling-Hammond
+								li Finnish Lessons by Pasi Sahlberg
+								li The Third Wave by Alvin Toffler
+								li Email: <a href="mailto:bberry@teachingquality.org">bberry@teachingquality.org</a>
+			.filter-block.decor-2
+				.container-fluid
+					.title-row.gray
+						i.title-decor
+					ul.list-item
+						-for( var i = 1; i <= 15; i++ )
+							li
+								.item
+									a(href="#")
+										.avatar: img(src="images/avatar-01.jpg", alt="image description")
+										span.name John Holland
+										span.career Teacher
+			include pug/template/_subscribe
+		include pug/common/_footer

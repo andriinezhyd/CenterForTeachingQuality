@@ -1,0 +1,115 @@
+.filter-block {
+  position: relative;
+  padding: rem-calc(66) 0 rem-calc(64);
+  margin-top: rem-calc(74);
+  width: 100%;
+  background: #f5f5f5;
+
+  &:after {
+    position: absolute;
+    content: '';
+    right: 50%;
+    transform: translateX(50%);
+    color: #898989;
+    font-size: rem-calc(21);
+    line-height: 1;
+    font-family: $font-ico;
+  }
+
+  &:after {
+    content: '\e908';
+    bottom: rem-calc(48);
+  }
+}
+
+.filter-list {
+  @extend %listreset;
+  display: inline-flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: center;
+  font-weight: $light;
+  font-size: rem-calc(14);
+  line-height: 22px;
+  padding-top: rem-calc(9);
+  margin-bottom: rem-calc(48);
+
+  @include media('≥phone') {
+    font-size: rem-calc(18);
+  }
+
+  li {
+    padding: 0 rem-calc(8);
+
+    @include media('≥phone') {
+      padding: 0 rem-calc(14);
+    }
+
+    &.active {
+      font-weight: $bold;
+
+      a {
+        color: $yellow;
+      }
+    }
+
+    a {
+      color: #666;
+
+      &:hover {
+        color: $yellow;
+      }
+    }
+  }
+}
+
+.filter-button-list {
+  @extend %listreset;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0 0 rem-calc(22);
+  padding-bottom: rem-calc(5);
+  border-bottom: 1px solid $gray;
+  padding-top: rem-calc(20);
+  margin-top: rem-calc(-20);
+
+  @include media('≥tablet') {
+    margin: rem-calc(-20) rem-calc(-15) rem-calc(22);
+  }
+
+  li {
+    width: 100%;
+    padding: 0 0 rem-calc(15);
+
+    @include media('≥tablet') {
+      width: 33.3%;
+      padding: 0 rem-calc(15) rem-calc(15);
+    }
+
+    @include media('≥desktop') {
+      width: rem-calc(276);
+    }
+
+    &.active {
+      .btn-outline-primary {
+        color: $white;
+        background: $brand-primary;
+      }
+    }
+  }
+
+  .btn {
+    text-transform: none;
+    min-width: 0;
+    width: 100%;
+  }
+
+  .btn-lg {
+    padding-top: rem-calc(15);
+    padding-bottom: rem-calc(13);
+    font-size: rem-calc(14);
+    line-height: 18px;
+    letter-spacing: 1px;
+  }
+}

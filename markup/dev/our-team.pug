@@ -1,0 +1,53 @@
+include pug/common/_head
+	block content
+		include pug/common/_header
+		main#main
+			.title-section.min-height-flex(style="background-image:url(images/bg-title-section.jpg)")
+				.height-flex.min-height-175
+					.container-fluid
+						.row.justify-content-center
+							.col-10.col-md-12
+								.text-box
+									h2 Our Team
+			.ctq-section
+				.img-decor
+					img(src="images/img-decor01.png", alt="image description")
+				.container-fluid
+					.row.justify-content-center
+						.col-10
+							.text.text-left
+								p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in repre.
+			section.content-section
+				.container-fluid
+					.row.justify-content-center
+						.col-10
+							h4 Consectetur adipisicing elit.
+							p Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+							h4 Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+							p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+							ul
+								li Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+								li Accusantium doloremque laudantium, totam rem aperiam
+								li Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+							p Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+			.filter-block.decor-2
+				.container-fluid
+					.title-row.gray
+						i.title-decor
+					nav.ajax-load(data-filter)
+						ul.filter-list
+							li(data-category="01").active: a(href="inc/content1.html") All
+							li(data-category="02"): a(href="inc/content2.html") Staff
+							li(data-category="03"): a(href="inc/content3.html") Consultants
+							li(data-category="04"): a(href="inc/content4.html") Board of Directors
+					.content(data-load)
+						//- ul.list-item
+						//- 	-for( var i = 1; i <= 15; i++ )
+						//- 		li
+						//- 			.item
+						//- 				a(href="#")
+						//- 					.avatar: img(src="images/avatar-01.jpg", alt="image description")
+						//- 					span.name John Holland
+						//- 					span.career Teacher
+			include pug/template/_subscribe
+		include pug/common/_footer

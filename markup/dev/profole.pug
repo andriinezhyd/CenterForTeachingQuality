@@ -1,0 +1,107 @@
+-var bodyClass= "logged-in";
+include pug/common/_head
+	block content
+		include pug/common/_header
+		main#main
+			section.title-dashboard(style="background: #f9a020;")
+				.container-fluid
+					.row.justify-content-center
+						.col-md-10
+							.title.text-center.text-uppercase: span MY PROFILE
+			section.section-profile
+				form(action="#")
+					.container-fluid
+						.row.justify-content-center
+							.col-md-11
+								.row.box-form
+									.col-12
+										h3.decor-line-2.line-black Name
+										.row.align-items-center
+											.col-md-3.col-lg-2
+												label Username
+											.col-md-5
+												input#username(type="email", placeholder="Email Address From Previous Page")
+											.col-md-4
+												span Usernames cannot be changed.
+										.row.align-items-center
+											.col-md-3.col-lg-2
+												label First Name
+											.col-md-5
+												input#first-name(type="text", placeholder="Name")
+										.row.align-items-center
+											.col-md-3.col-lg-2
+												label Last Name
+											.col-md-5
+												input#last-name(type="text", placeholder="Name")
+								.row.box-form
+									.col-12
+										h3.decor-line-2.line-black Contact Info
+										.row.align-items-center
+											.col-md-3.col-lg-2
+												label Email (required)
+											.col-md-5
+												input#email(type="email", placeholder="Text")
+										.row.align-items-center
+											.col-md-3.col-lg-2
+												label Organization
+											.col-md-5
+												input#organization(type="text", placeholder="Text")
+										.row.align-items-center
+											.col-md-3.col-lg-2
+												label Current Role
+											.col-md-5
+												select
+													option Text
+													option Text 1
+													option Text 2
+													option Text 3
+								.row.box-form
+									.col-12
+										h3.decor-line-2.line-black About Yourself
+										.row
+											.col-md-3.col-lg-2
+												label User Bio
+											.col-md-9.col-lg-10
+												textarea#user-bio(placeholder="Text")
+												b.description Share a little biographical information to fill out your profile. This may be shown publicly.
+										.row
+											.col-md-3.col-lg-2
+												label.label-avatar Profile Picture
+											.col-md-9.col-lg-10
+												.profile-photo
+													img(src="images/profile-photo-01.png", alt="image description", width="96", height="96")
+								.row.box-form
+									.col-12
+										h3.decor-line-2.line-black Password
+										.row.align-items-center
+											.col-md-3.col-lg-2
+												label New Password
+											.col-md-9.col-lg-10
+												.btn-group
+													button.btn.btn-lg.btn-warning.text-no-uppercase(type="button") Generate Password
+													button.btn.btn-lg.btn-warning.text-no-uppercase(type="button") Generate Password
+													button.btn.btn-lg.btn-warning.text-no-uppercase(type="button") Generate Password
+								.row.box-form
+									.col-12
+										h3.decor-line-2.line-black Connect me with opportunities and resources (related) to:
+										.row
+											.col-md-6
+												ul.checkbox-list
+													li
+														input#profile01-01(type="checkbox" name="profile")
+														label(for="profile01-01") Create or strengthen collectively-led schools or programs
+													li
+														input#profile01-02(type="checkbox" name="profile")
+														label(for="profile01-02") Assess the impact of work educators are leading together
+													li
+														input#profile01-03(type="checkbox" name="profile")
+														label(for="profile01-03") Design or strengthen teacher leadership roles, pathways or systems
+													li
+														input#profile01-04(type="checkbox" name="profile")
+														label(for="profile01-04") Increase effectiveness of virtual learning communities
+													li
+														input#profile01-05(type="checkbox" name="profile")
+														label(for="profile01-05") Share educators’ stories of impact
+								.btn-wrap
+									input.btn.btn-lg.btn-primary.text-no-uppercase(type="submit", value="Update Profile")
+		include pug/common/_footer

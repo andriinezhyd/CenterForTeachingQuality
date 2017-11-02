@@ -1,0 +1,33 @@
+.modal.fade.login(tabindex='-1', role='dialog', aria-hidden='true')
+	button.close(type='button', data-dismiss='modal'): span.icon-close
+	.modal-dialog.modal-sm
+		.modal-content
+			.container
+				.title-form.text-center
+					h3 LOGIN
+				form.login-form(action="#")
+					.form-group
+						input(type="email", placeholder="Your Email")
+					.form-group
+						input(type="password", placeholder="Password")
+					.form-group
+						button.btn.btn-primary(type="submit") Submit
+					.form-group.txt-wrap
+						span.text-uppercase Or
+					.form-group
+						a.btn.btn-primary.btn-ico(href="#")
+							span.icon-twitter
+							| Connect with Twitter
+					.form-group
+						a.btn.btn-primary.btn-ico(href="#")
+							span.icon-linkedin
+							| Connect with Linkedin
+					.row-text.txt-wrap.checkbox-modal
+						.row
+							.col-6
+								input#ch(type="checkbox")
+								label(for="ch") Remember me
+							.col-6
+								a(href="#", data-toggle='modal', data-target='.forgot-password', data-dismiss='modal') Forgot password?
+					.form-group
+						a.btn.btn-warning.text-no-uppercase(href="#", data-toggle='modal', data-target='.register', data-dismiss='modal') Not a member? Sign up today!

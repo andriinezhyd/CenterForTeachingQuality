@@ -1,0 +1,132 @@
+.info-box {
+
+  .row-info {
+    &:nth-child(even) {
+      background: $white;
+      color: $yellow;
+
+      &:before,
+      &:after {
+        position: absolute;
+        left: 0;
+        z-index: 2;
+        width: 100%;
+        height: rem-calc(14);
+        content: '';
+
+        @include media('≥tablet') {
+          height: rem-calc(22);
+        }
+
+        @include media('≥desktop') {
+          height: rem-calc(40);
+        }
+      }
+
+      &:before {
+        bottom: 100%;
+        margin-bottom: -1px;
+        background: url('images/img-decor05.png') no-repeat;
+        background-size: 100% 100%;
+      }
+
+      &:after {
+        top: 100%;
+        margin-top: -1px;
+        background: url('images/img-decor06.png') no-repeat;
+        background-size: 100% 100%;
+      }
+
+      .customer {
+        .visual {
+          border-color: $yellow;
+        }
+      }
+
+      .btn-outline-light {
+        border-color: $yellow;
+        color: $yellow;
+      }
+    }
+  }
+}
+
+.row-info {
+  position: relative;
+  padding: rem-calc(44) 0;
+  color: $white;
+  font-size: rem-calc(28);
+  line-height: 1;
+  background: $yellow;
+
+  @include media('≥tablet') {
+    padding: rem-calc(104) 0;
+  }
+
+  @include media('≥desktop') {
+    font-size: rem-calc(38);
+  }
+
+  .hold {
+
+    @include media('≥tablet') {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+
+  .customer {
+    color: inherit;
+    width: rem-calc(280);
+    height: rem-calc(280);
+    padding: 0;
+    margin: 0 auto rem-calc(12);
+
+    @include media('≥phone') {
+      width: rem-calc(376);
+      height: rem-calc(376);
+    }
+
+    @include media('≥tablet') {
+      margin: 0;
+    }
+  }
+
+  .customer-wrap {
+
+    @include media('≥tablet') {
+      margin-right: rem-calc(60);
+    }
+  }
+
+  .body-info {
+    width: 100%;
+    padding: 0 9%;
+    font-family: $ff-mr-eaves;
+    font-weight: $normal;
+    padding-bottom: rem-calc(5);
+    text-align: center;
+
+    @include media('≥tablet') {
+      padding: 0;
+      width: calc(100% - 376px);
+      text-align: left;
+    }
+
+    p {
+      margin-bottom: rem-calc(17);
+
+      @include media('≥tablet') {
+        margin-bottom: rem-calc(19);
+      }
+    }
+  }
+
+  .btn {
+    min-width: 1px;
+    padding-left: rem-calc(30);
+    padding-right: rem-calc(30);
+    letter-spacing: 1px;
+  }
+}

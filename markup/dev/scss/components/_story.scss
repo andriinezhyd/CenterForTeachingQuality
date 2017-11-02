@@ -1,0 +1,65 @@
+.story {
+  width: 100%;
+  background-size: cover;
+  background-position: 50% 50%;
+  color: $white;
+  font-size: rem-calc(21);
+  line-height: 25px;
+  display: flex;
+  flex-direction: row;
+
+  .hold {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: rem-calc(398);
+    padding-top: rem-calc(39);
+    padding-bottom: rem-calc(39);
+  }
+
+  &.decor {
+    .hold {
+      justify-content: flex-start;
+    }
+  }
+
+  p {
+    margin-bottom: rem-calc(16);
+  }
+
+  h2 {
+    margin: 0 0 rem-calc(4);
+    color: inherit;
+    font-size: rem-calc(38);
+    line-height: 46px;
+    font-weight: $semibold;
+
+    @include media('≥tablet') {
+      margin: 0 0 rem-calc(16);
+    }
+
+    a {
+      color: inherit;
+
+      &:hover {
+        color: $yellow;
+      }
+    }
+  }
+
+  .body {
+    padding-bottom: rem-calc(18);
+  }
+
+  &.decor2 {
+    margin-top: rem-calc(149);
+    position: relative;
+
+    .img-decor-02 {
+      position: absolute;
+      top: auto;
+      right: 0;
+      bottom: 0;
+    }
+  }
+}

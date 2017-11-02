@@ -1,0 +1,227 @@
+.modal-active .fade {
+  display: flex !important;
+  flex-direction: column;
+}
+
+.modal {
+  font-size: rem-calc(12);
+  line-height: 19px;
+  color: $white;
+  height: 100vh;
+  overflow-y: auto;
+
+  .modal-dialog {
+    display: flex;
+    width: 100%;
+    margin: auto;
+    padding-top: rem-calc(15);
+    padding-bottom: rem-calc(15);
+    transform: translate(0, 0);
+
+    @include media('<tablet') {
+      padding-top: rem-calc(80);
+    }
+  }
+
+  .modal-content {
+    width: 100%;
+  }
+
+  .close {
+    width: rem-calc(40);
+    height: rem-calc(40);
+    position: fixed;
+    right: rem-calc(21);
+    top: rem-calc(21);
+    z-index: 99;
+    border: 2px solid $white ;
+    color: $white;
+    opacity: 1;
+    transition: border-color 0.3s;
+    font-size: rem-calc(13);
+    cursor: pointer;
+
+    &:hover {
+      border-color: $blue;
+    }
+  }
+
+  h3 {
+    color: inherit;
+    font-weight: $bold;
+    font-size: rem-calc(27);
+    line-height: 30px;
+    font-family: $ff-mr-eaves;
+    margin-bottom: rem-calc(5);
+  }
+
+  h4 {
+    color: inherit;
+    font-family: $base-font-sans-serif;
+    font-size: rem-calc(14);
+    line-height: 18px;
+    text-transform: uppercase;
+    margin: 0 0 rem-calc(10);
+  }
+
+  .btn,
+  input {
+    width: 100%;
+  }
+
+  &.create,
+  &.register,
+  &.login {
+    h3 {
+      font-weight: $light;
+      text-transform: uppercase;
+      margin-bottom: rem-calc(8);
+    }
+  }
+
+  .btn {
+    font-size: rem-calc(14);
+    line-height: 18px;
+    padding: rem-calc(14) rem-calc(5);
+
+    &.btn-ico {
+      padding-left: rem-calc(59);
+      position: relative;
+      font-size: rem-calc(13);
+
+      [class*='ico'] {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        width: rem-calc(54);
+        font-size: rem-calc(20);
+        line-height: 50px;
+        left: rem-calc(-2);
+        top: rem-calc(-2);
+        bottom: rem-calc(-2);
+      }
+    }
+
+    &:hover {
+      text-shadow: none;
+    }
+  }
+
+  .btn-primary {
+    &.btn-ico {
+      [class*='ico'] {
+        background: #02407b;
+      }
+    }
+  }
+
+  .btn-warning {
+    &.btn-ico {
+      [class*='ico'] {
+        background: #de8300;
+      }
+    }
+  }
+
+  .auth .wp-social-login-widget {
+    .btn-warning {
+      background: $brand-primary;
+      border-color: $brand-primary;
+
+      &:hover {
+        color: $brand-primary;
+        background: rgba($white, 0.75);
+
+        [class*='ico'] {
+          color: $white;
+        }
+      }
+
+      &.btn-ico {
+        [class*='ico'] {
+          color: $white;
+          background: #02407b;
+        }
+      }
+    }
+  }
+
+  .txt-wrap {
+    padding: rem-calc(10) 0 rem-calc(15);
+    text-align: center;
+    font-size: rem-calc(14);
+
+    a {
+      color: inherit;
+      text-decoration: underline;
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+
+  .checkbox-modal {
+    margin-top: rem-calc(-5);
+    margin-bottom: rem-calc(7);
+    font-size: rem-calc(12);
+    padding-top: 0;
+  }
+
+  .padding-top {
+    padding-top: rem-calc(50);
+  }
+}
+
+.register-btn-box {
+  cursor: pointer;
+
+  >.btn {
+    pointer-events: none;
+  }
+}
+
+.txt-modal {
+  padding-top: rem-calc(20);
+
+  @include media('≥tablet') {
+    padding-top: 0;
+    margin: rem-calc(-3) 0 0;
+  }
+}
+
+.modal-backdrop {
+  background: $modal-backdrop-bg url('images/bg-modal.png') no-repeat 100% 100%;
+}
+
+.form-group {
+  margin-bottom: rem-calc(11);
+}
+
+.checkbox-wrap {
+  padding: rem-calc(14) rem-calc(9);
+
+  label {
+    font-size: rem-calc(15);
+    line-height: 18px;
+    padding-left: rem-calc(30);
+  }
+}
+
+.checkbox-list {
+  @extend %listreset;
+  padding: rem-calc(5) 0;
+
+  li {
+    margin-bottom: rem-calc(13);
+  }
+}
+
+.modal-active {
+  overflow: hidden;
+}
+
+.wp-social-login-provider-list {
+  padding: 0;
+}

@@ -1,0 +1,23 @@
+.subscribe-wrap
+	.subscribe.parallax-section
+		.bg-holder.d-flex.align-items-center
+			img(src="images/img-parallax02.jpg" alt="image description")
+			.container-fluid
+				.row
+					.col-lg-6.d-flex.justify-content-center.align-items-center
+						span.title Stay up-to-date with CTQ
+					.col-lg-6.d-flex.justify-content-center.align-items-center
+						.subscribe-form
+							.widget_wysija_cont.php_wysija
+								#msg-form-wysija-php59d5f519b5009-2.wysija-msg.ajax
+								form#form-wysija-php59d5f519b5009-2.widget_wysija.php_wysija(method='post', action='#wysija')
+									p.wysija-paragraph
+										input.wysija-input(type='text', name='wysija[user][email]', class='validate[required,custom[email]]', title='Enter your email', placeholder='Enter your email', value='')
+										span.abs-req
+											input.wysija-input(type='text', name='wysija[user][abs][email]', class='validated[abs][email]', value='')
+									input.wysija-submit.wysija-submit-field(type='submit', value='SUBSCRIBE')
+									input(type='hidden', name='form_id', value='2')
+									input(type='hidden', name='action', value='save')
+									input(type='hidden', name='controller', value='subscribers')
+									input(type='hidden', value='1', name='wysija-page')
+									input(type='hidden', name='wysija[user_list][list_ids]', value='1')

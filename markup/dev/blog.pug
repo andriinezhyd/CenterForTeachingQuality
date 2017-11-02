@@ -1,0 +1,99 @@
+include pug/common/_head
+	block content
+		include pug/common/_header
+		main#main
+			section.recent_blog_posts
+				.container-fluid
+					.row.justify-content-center
+						.col-md-11.col-11
+							.title.text-center.text-uppercase
+								span RECENT BLOG POSTS
+						.col-lg-11.col-md-12.col-11
+							.recent-posts-slider
+								-for(var i = 1; i <= 3; i++)
+									.item
+										.row
+											.col-md-6.col-xs-12
+												.left.text-left
+													.name: a(href="#") FEATURED ROUNDTABLE
+													.title: a(href="#") Holding on and letting go: The power of story
+													.text
+														p What’s your story? This roundtable launch post explores why we hold onto our stories, the power of our individual and collective stories, and the need for educators to shed some humility in order to share compelling stories of impact to shift the narrative of public education.
+											.col-md-6.col-xs-12
+												.right
+													.img(style='background: url("images/blog-img1.png") center center no-repeat; background-size: cover;')
+			section.main_blog_posts
+				.container-fluid.js-ajax-filters
+					.row
+						//- nav.ajax-load(data-container='filter-container')
+						nav.ajax-load(data-filter)
+							ul.filter-list
+								li(data-category='01').active
+									a(href="#")
+										.img(style='background-image: url("images/ajax_tab.png");')
+										span.name.text-center.text-uppercase Collective Leadership
+								li(data-category='02')
+									a(href="#")
+										.img(style='background-image: url("images/ajax_tab.png");')
+										span.name.text-center.text-uppercase Virtual Learning Communities
+								li(data-category='03')
+									a(href="#")
+										.img(style='background-image: url("images/ajax_tab.png");')
+										span.name.text-center.text-uppercase Impact assessment
+								li(data-category='04')
+									a(href="#")
+										.img(style='background-image: url("images/ajax_tab.png");')
+										span.name.text-center.text-uppercase Educators’ stories
+								li(data-category='05')
+									a(href="#")
+										.img(style='background-image: url("images/ajax_tab.png");')
+										span.name.text-center.text-uppercase System
+											br
+											| redesign
+								//- li(data-category='').active
+								//- 	a(href="inc/dashboard1.html")
+								//- 		.img(style='background: url("") center center no-repeat; background-size: cover')
+								//- 		span.name.text-center.text-uppercase Collective Leadership
+								//- li(data-category='')
+								//- 	a(href="inc/dashboard2.html")
+								//- 		.img(style='background: url("") center center no-repeat; background-size: cover')
+								//- 		span.name.text-center.text-uppercase Virtual Learning Communities
+								//- li(data-category='')
+								//- 	a(href="inc/dashboard3.html")
+								//- 		.img(style='background: url("") center center no-repeat; background-size: cover')
+								//- 		span.name.text-center.text-uppercase Impact assessment
+								//- li(data-category='')
+								//- 	a(href="inc/dashboard1.html")
+								//- 		.img(style='background: url("") center center no-repeat; background-size: cover')
+								//- 		span.name.text-center.text-uppercase Educators’ stories
+								//- li(data-category='')
+								//- 	a(href="inc/dashboard2.html")
+								//- 		.img(style='background: url("") center center no-repeat; background-size: cover')
+								//- 		span.name.text-center.text-uppercase System
+								//- 			br
+								//- 			| redesign
+						.content(data-load)
+							.container-fluid(data-current="2" data-pages="20")
+								.row.justify-content-center.justify-content-md-start
+									-for(var i = 1; i <= 12; i++)
+										.col-md-6.col-10
+											+blogItem({
+												imgName: 'avatar.jpg',
+												datetime: '2017-07-07',
+												time: '07/07/17',
+												name: 'by John Holland',
+												description: 'Why this effective and passionate teacher is leaving the classroom (for now)'
+											})
+					nav.navigation.pagination(data-href="inc/dashboard1.html")
+						.navigation-comments#demo
+					//- nav(class="navigation-comments")
+					//- 	.nav-links
+					//- 		a.prev.page-numbers(href="#")
+					//- 		a.page-numbers(href="#") 1
+					//- 		span.page-numbers.current 2
+					//- 		a.page-numbers(href="#") 3
+					//- 		a.page-numbers(href="#") 4
+					//- 		a.next.page-numbers(href="#")
+			include pug/template/_subscribe
+			include pug/template/_widget-menu
+		include pug/common/_footer

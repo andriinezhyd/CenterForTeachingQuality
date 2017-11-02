@@ -1,0 +1,61 @@
+.call-to-action {
+  position: relative;
+  margin-bottom: rem-calc(28);
+  padding: rem-calc(63) 0 rem-calc(57);
+  color: $white;
+  background-size: cover;
+  font-size: rem-calc(21);
+  line-height: 25px;
+
+  @include media('≥tablet') {
+    padding: rem-calc(63) 0 rem-calc(58);
+  }
+
+  @include media('≥desktop') {
+    padding: rem-calc(30) 0 rem-calc(37);
+  }
+
+  &:after {
+    position: absolute;
+    bottom: rem-calc(-1);
+    left: 0;
+    width: 100%;
+    height: rem-calc(12);
+    content: '';
+    background: url('images/decor-04.png') no-repeat 50% 100%;
+    background-size: 100% 100%;
+
+    @include media('≥tablet') {
+      height: rem-calc(18);
+    }
+
+    @include media('≥desktop') {
+      height: rem-calc(32);
+    }
+  }
+
+  h2 {
+    margin-bottom: rem-calc(28);
+    padding-bottom: rem-calc(6);
+    font-size: rem-calc(28);
+    line-height: 1;
+    color: inherit;
+  }
+
+  p {
+    margin-bottom: rem-calc(18);
+  }
+}
+
+.call-to-action-img {
+  padding-top: rem-calc(96);
+  padding-bottom: rem-calc(97);
+
+  + .ctq-section {
+    margin-top: rem-calc(70);
+
+    @include media('≥desktop') {
+      margin-top: rem-calc(93);
+    }
+  }
+}

@@ -1,0 +1,78 @@
+include pug/common/_head
+	block content
+		include pug/common/_header
+		main#main
+			.title-section.min-height-flex(style="background-image:url(images/bg-title-section.jpg)")
+				.height-flex.min-height-175
+					.container-fluid
+						.row.justify-content-center
+							.col-10.col-md-12
+								.text-box
+									h2 Funders
+			.ctq-section
+				.img-decor
+					img(src="images/img-decor01.png", alt="image description")
+				.container-fluid
+					.row.justify-content-center
+						.col-10
+							.text.text-left
+								p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+			section.content-section
+				.container-fluid
+					.row.justify-content-center
+						.col-10
+							h4 Consectetur adipisicing elit.
+							p Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+							h4 Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+							p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+							ul
+								li Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+								li Accusantium doloremque laudantium, totam rem aperiam
+								li Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+							p Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+			.block-posts
+				.container-fluid
+					.title-row.orange
+						h1 our funders
+				.container-fluid
+					.row.justify-content-center.justify-content-lg-start
+						.col-10.col-md-9.col-lg-6
+							+postItem({
+								tag: 'Arthur Vining Davis',
+								description: 'The Arthur Vining Davis Foundations based in Jacksonville, Florida are a national philanthropic organization established through the generosity of the late American Industrialist, Arthur Vining Davis.'
+							})
+							+postItem({
+								tag: 'Carnegie Foundation',
+								description: 'The Carnegie Foundation for the Advancement of Teaching is committed to developing networks of ideas, individuals, and institutions to advance teaching and learning. We join together scholars, practitioners, and designers in new ways to solve problems of educational practice. Toward this end, we work to integrate the discipline of improvement science into education with the goal of building the field’s capacity to improve.'
+							})
+							+postItem({
+								tag: 'Rose Community Foundation',
+								description: 'In partnership with our donors, grantees and other community leaders, we seek innovative approaches to enduring problems and emerging issues.'
+							})
+							+postItem({
+								tag: 'The Fund <br>(Kentucky Department of Education)',
+								description: 'The Fund for Transforming Education in Kentucky (The Fund) recruits, coordinates and supports expertise and resources to inspire and scale innovation and excellence in Kentucky’s public schools, resulting in a better future for all of our children.'
+							})
+							+postItem({
+								tag: 'Z. Smith Reynolds Foundation',
+								description: 'The Z. Smith Reynolds Foundation invests in nonprofit organizations that are dedicated to building an equitable, sustainable, vibrant state and communities.'
+							})
+						.col-10.col-md-9.col-lg-6
+							+postItem({
+								tag: 'Bill & Melinda Gates Foundation',
+								description: 'Our United States Division works to improve U.S. high school and postsecondary education and support vulnerable children and families in Washington State. Our approach to grantmaking in all four areas emphasizes collaboration, innovation, risk-taking, and, most importantly, results.'
+							})
+							+postItem({
+								tag: 'National Education Association (NEA)',
+								description: 'The National Education Association is the nation’s largest professional employee organization, representing nearly 3 million elementary and secondary teachers, higher education faculty, education support professionals, school administrators, retired educators and students preparing to become teachers.'
+							})
+							+postItem({
+								tag: 'Stuart Foundation',
+								description: 'Throughout the country there exist great public schools, inspiring and dedicated teachers, and innovative educational leaders that have transformed their schools. The challenge before us is not the creation of individual pockets of greatness, but rather the development of education systems which reach all students.'
+							})
+							+postItem({
+								tag: 'The Ford Foundation',
+								description: 'We believe all people should have the opportunity to reach their full potential, contribute to society, and have voice in the decisions that affect them.'
+							})
+			include pug/template/_subscribe
+		include pug/common/_footer

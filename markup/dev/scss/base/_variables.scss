@@ -1,0 +1,188 @@
+// Colors
+// Color calculator - http://razorjam.github.io/sasscolourfunctioncalculator/
+// Color names - http://name-of-color.com/
+
+$black:                  #000;
+$white:                  #fff;
+$gray:                   #6d6e71;
+$gray2:                  #fafafa;
+$light-gray:             #f2f2f2;
+$dark-gray:              #424242;
+$blue:                   #1a66af;
+$blue-light:             #63b6e6;
+$blue-dark:              #0f436b;
+$red:                    #c22228;
+$yellow:                 #f9a020;
+
+
+//## Gray and brand colors for use across Bootstrap.
+
+$gray-base:              #000 !default;
+$gray-darker:            lighten($gray-base, 13.5%) !default; // #222
+$gray-dark:              lighten($gray-base, 20%) !default;   // #333
+$gray:                   lighten($gray-base, 33.5%) !default; // #555
+$gray-light:             lighten($gray-base, 46.7%) !default; // #777
+$gray-lighter:           lighten($gray-base, 93.5%) !default; // #eee
+
+$brand-primary:          $blue !default; // #337ab7
+$brand-success:          #5cb85c !default;
+$brand-info:             #5bc0de !default;
+$brand-warning:          $yellow !default;
+$brand-danger:           $red !default;
+
+// font weight
+$thin:                        100;
+$light:                       300;
+$normal:                      400;
+$medium:                      500;
+$semibold:                    600;
+$bold:                        700;
+$black-font:                  800;
+
+
+$widget-margin:               20px;
+$vertical-rhythm:             20px;
+
+$wp-caption-border:           1px solid $black;
+
+$base-font-sans-serif:        'libre_franklin', 'Arial', 'Helvetica Neue', 'Helvetica', sans-serif;
+$base-font-serif:             'Times New Roman', 'Times', 'Baskerville', 'Georgia', serif;
+$base-font:                   $base-font-sans-serif;
+$font-ico:                   'icomoon';
+
+$ff-mr-eaves:                 'mr-eaves-xl-modern', $base-font-sans-serif;
+$ff-sofiapro:                 'sofia-pro', $base-font-sans-serif;
+
+$base-min-width:              320px;
+$max-width-center-container:  1140px;
+
+$border-radius-base:          0;
+
+//== Breadcrumbs
+$breadcrumb-padding-vertical:   8px !default;
+$breadcrumb-padding-horizontal: 15px !default;
+//** Breadcrumb background color
+$breadcrumb-bg:                 #f5f5f5 !default;
+//** Breadcrumb text color
+$breadcrumb-color:              #ccc !default;
+//** Text color of current page in the breadcrumb
+$breadcrumb-active-color:       $gray-light !default;
+//** Textual separator for between breadcrumb elements
+$breadcrumb-separator:          '/' !default;
+
+//== Buttons
+// For each of Bootstrap's buttons, define text, background and border color.
+$btn-font-weight:                normal !default;
+
+$btn-default-color:              #333 !default;
+$btn-default-bg:                 #fff !default;
+$btn-default-border:             #ccc !default;
+// Allows for customizing button radius independently from global border radius
+$btn-border-radius-base:         0 !default;
+
+// Allows for customizing button radius independently from global border radius
+$btn-border-radius:              0 !default;
+$btn-border-radius-lg:           0 !default;
+$btn-border-radius-sm:           0 !default;
+
+
+$input-btn-padding-y:       .5rem !default;
+$input-btn-padding-x:       .75rem !default;
+$input-btn-line-height:     1.25 !default;
+
+$input-btn-padding-y-sm:    .25rem !default;
+$input-btn-padding-x-sm:    .5rem !default;
+$input-btn-line-height-sm:  1.5 !default;
+
+$input-btn-padding-y-lg:     1.25rem !default;
+$input-btn-padding-x-lg:     1.25rem !default;
+$input-btn-line-height-lg:  1.5 !default;
+
+// Links
+//
+// Style anchor elements.
+
+$link-color:            $gray !default;
+$link-decoration:       none !default;
+$link-hover-color:      $blue !default;
+$link-hover-decoration: none !default;
+
+
+// Fonts
+//
+// Font, line-height, and color for body text, headings, and more.
+
+$font-family-base:       $base-font !default;
+$body-color:             $gray;
+
+$font-size-base: 0.8125rem !default; // Assumes the browser default, typically `16px`
+$font-size-lg:   0.8125rem !default;
+$font-size-sm:   0.8125rem !default;
+
+$font-weight-base: $light !default;
+$line-height-base: 1.69 !default;
+
+$border-width: 2px !default;
+
+$h1-font-size: 3.125rem !default;
+$h2-font-size: 3.125rem !default;
+$h3-font-size: 2rem !default;
+$h4-font-size: 1.125rem !default;
+$h5-font-size: 0.875rem !default;
+$h6-font-size: 0.875rem !default;
+
+
+// Forms
+
+$input-bg:                       #cdcdcd !default;
+
+$input-color:                    $black !default;
+$input-border-color:             $gray !default;
+$input-btn-border-width:         $border-width !default; // For form controls and buttons
+$input-box-shadow:               none !default;
+
+$input-focus-bg:                 $white !default;
+$input-focus-border-color:       #0099da !default;
+$input-focus-box-shadow:         none !default;
+$input-focus-color:              $black !default;
+
+$input-border-radius:            0 !default;
+
+$input-placeholder-color:        $black !default;
+
+
+
+$pink:                #ab3593;
+
+// Modals
+// Padding applied to the modal body
+$modal-inner-padding:         0 !default;
+
+$modal-content-bg:               transparent !default;
+$modal-content-border-color:     transparent !default;
+$modal-content-border-width:     0 !default;
+$modal-content-box-shadow-xs:    none !default;
+$modal-content-box-shadow-sm-up: none !default;
+
+$modal-backdrop-bg:           $pink !default;
+$modal-backdrop-opacity:      0.95 !default;
+$modal-footer-border-color:   transparent !default;
+$modal-header-border-width:   0 !default;
+$modal-footer-border-width:   0 !default;
+$modal-header-padding:        0 !default;
+
+$modal-lg:                    680px !default;
+$modal-md:                    580px !default;
+$modal-sm:                    340px !default;
+
+
+// breadcrumbs
+$breadcrumb-padding-y:          0.3rem !default;
+$breadcrumb-padding-x:          40px !default;
+$breadcrumb-item-padding:       .5rem !default;
+
+$breadcrumb-bg:                 $yellow !default;
+$breadcrumb-divider-color:      white !default;
+$breadcrumb-active-color:       $gray !default;
+$breadcrumb-divider:            "\e90a" !default;
+

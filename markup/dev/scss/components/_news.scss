@@ -1,0 +1,36 @@
+.news-footer {
+  width: 100%;
+  color: $yellow;
+
+  time {
+    display: block;
+    margin-bottom: rem-calc(3);
+    font-size: rem-calc(13);
+    line-height: 16px;
+    font-weight: $bold;
+    color: $white;
+
+    > a {
+      color: inherit;
+
+      &:hover {
+        color: $yellow;
+      }
+    }
+  }
+
+  h3 {
+    font-weight: $light;
+    color: $yellow;
+    font-size: rem-calc(21);
+    line-height: 25px;
+
+    > a {
+      color: inherit;
+    }
+  }
+
+  + .news-footer {
+    margin-top: rem-calc(33);
+  }
+}

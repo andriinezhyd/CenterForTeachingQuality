@@ -1,0 +1,45 @@
+footer#footer
+	.footer-panel
+		.container-fluid
+			.row
+				.col-lg-4.col-md-6
+					.box
+						h2.decor-line-2.line-white RECENT NEWS
+						+newsFooter({
+							datetime: '2017-12-07',
+							time: '07/12/17',
+							title: 'This is a headline for a recent news post about CTQ. This is not a blog post.'
+						})
+						+newsFooter({
+							datetime: '2017-12-07',
+							time: '07/12/17',
+							title: 'This is a headline for a recent news post about CTQ. This is not a blog post.'
+						})
+				.col-lg-4.col-md-6
+					.box
+						h2.decor-line-2.line-white FOLLOW US
+						aside.widget.xmt
+							.xmt.xmt_Primary
+								.header_48
+									a.header_48.text_18(target='_blank', href='#') @TEACHINGQUALITY
+								ul.tweet_area
+									li.tweet_list
+										a(href='#', rel='nofollow', target='_blank') Our country has a troubled history of dealing with #bilingualism, @daniellitaa says in @edweekteacher… twitter.com/i/web/status/8…
+				.col-lg-4.col-md-6
+					.box
+						h2.decor-line-2.line-white CONNECT WITH US
+						//- include social
+						include ../template/_social
+						address.address
+							span: a(href="tel:9199133000") (919) 913 3000
+							span: a(href="mailto:contactus@teachingquality.com") contactus@teachingquality.com
+							span 605 West Main St., Suite 207<br> Carrboro, NC 27510
+	.footer-bar
+		.container-fluid
+			span
+				| &copy; 2017 <a href="#">Center for Teaching Quality</a>. All rights reserved.
+			<ul class="menu-footer"><li><a href="#">Privacy Statement</a></li><li><a href="#">Terms &amp; Conditions</a></li></ul>
+include ../template/_login
+include ../template/_forgot-password
+include ../template/_register
+include ../template/_create

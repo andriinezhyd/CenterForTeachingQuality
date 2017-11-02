@@ -1,0 +1,130 @@
+-var bodyClass= "home";
+include pug/common/_head
+	block content
+		include pug/common/_header
+		main#main
+			.start-section.parallax-section
+				.bg-holder
+					img(src="images/img-parallax01.jpg" alt="image description")
+					.container-fluid
+						.row.justify-content-center
+							.col-10.col-md-12
+								.text-box
+									p Ignite the change our education system needs.
+									.btn-row.btn-group
+										a.btn.btn-lg.btn-outline-warning(href="#") call to action for school systems
+										a.btn.btn-lg.btn-outline-warning(href="#") call to action to view services
+			.ctq-section
+				.img-decor
+					img(src="images/img-decor01.png", alt="image description")
+				.container-fluid
+					.row.d-flex.flex-wrap-reverse
+						.col-md-6.col-lg-4.d-flex.align-items-end
+							img.ctq-img(src="images/img-person01.png", alt="image description")
+						.col-md-6.col-lg-7.d-flex.align-items-center
+							.text.text-center.text-md-left
+								p CTQ helps you leverage the collective strength of your teams to create the change your system needs.
+								a.btn.btn-lg.btn-outline-warning(href="#") call to action to work with ctq
+			section.customers-section.line-decor
+				.content-hold
+					.container-fluid
+						.row.justify-content-center
+							.col-12
+								.title-row.white
+									i.title-decor
+									h1 who we serve
+							.col-6.col-lg-4
+								.customer-wrap
+									a.customer(href="#")
+										.visual(style="background-image:url(images/decor-01.png)")
+										p school systems
+							.col-6.col-lg-4
+								.customer-wrap
+									a.customer(href="#")
+										.visual(style="background-image:url(images/decor-02.png)")
+										p ADMINISTRATORS
+							.col-6.col-lg-4
+								.customer-wrap
+									a.customer(href="#")
+										.visual(style="background-image:url(images/decor-03.png)")
+										p TEACHERS
+			section.services-section
+				.container-fluid
+					.title-row.orange
+						i.title-decor
+						h1 our services
+					ul.services-list
+						li
+							+services({
+								imgName: 'support.svg',
+								title: 'Support collective leadership',
+								description: 'Our Impact Assessment Tools help you plan,  assess, and share the impact of collective educational leadership solutions.'
+							})
+						li
+							+services({
+								imgName: 'community.svg',
+								title: 'Facilitate virtual communities',
+								description: 'Our customizable CCI curriculum builds collective leadership skills among diverse teams of school, district, and state educational leaders.'
+							})
+						li
+							+services({
+								imgName: 'tel.svg',
+								title: 'Tell <br> Stories',
+								description: 'Individualized professional learning that helps educators develop innovative, student-centered classrooms and schools.'
+							})
+						li
+							+services({
+								imgName: 'redesign.svg',
+								title: 'Redesign <br> Systems',
+								description: 'We facilitate your team’s efforts to design and implement hybrid teacher-leader roles and collaborative, learner-centered school models in your community.'
+							})
+						li
+							+services({
+								imgName: 'assess.svg',
+								title: 'Personalize professional development',
+								description: 'Our customizable CCI curriculum builds collective leadership skills among diverse teams of school, district, and state educational leaders.'
+							})
+			section.story.decor(style="background-image:url(images/bg-story-01.jpg)")
+				.container-fluid.hold
+					.row.justify-content-center.justify-content-lg-start
+						.col-10.col-lg-6
+							.title
+								span.tag.decor-line-2.line-white FEATURED STORY
+								h2: a(href="#") Collaborating for change.
+							.body
+								p What happens when a school's teachers and administrators come together to solve a problem and improve learning for all students?
+							a.btn.btn-sm.btn-outline-warning(href="#") READ MORE
+			include pug/template/_subscribe
+			section.blog-section
+				.container-fluid
+					.title-row.blue
+						i.title-decor
+						h1 FROM THE BLOG
+					.row.blog-wrap.justify-content-center
+						.col-md-6.col-10
+							+blogItem({
+								imgName: 'avatar.jpg',
+								datetime: '2017-07-07',
+								time: '07/07/17',
+								name: 'by John Holland',
+								description: 'Why this effective and passionate teacher is leaving the classroom (for now)'
+							})
+						.col-md-6.col-10
+							+blogItem({
+								imgName: 'avatar.jpg',
+								datetime: '2017-07-07',
+								time: '07/07/17',
+								name: 'by John Holland',
+								description: 'Why this effective and passionate teacher is leaving the classroom (for now)'
+							})
+			section.story(style="background-image:url(images/bg-story-01.jpg)")
+				.container-fluid.hold
+					.row.justify-content-center.justify-content-lg-start
+						.col-10.col-lg-6
+							.title
+								span.tag.decor-line-2.line-white FEATURED STORY
+								h2: a(href="#") Collaborating for change.
+							.body
+								p What happens when a school's teachers and administrators come together to solve a problem and improve learning for all students?
+							a.btn.btn-sm.btn-outline-warning(href="#") READ MORE
+		include pug/common/_footer

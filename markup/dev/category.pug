@@ -1,0 +1,38 @@
+include pug/common/_head
+	block content
+		include pug/common/_header
+		main#main
+			section.title-dashboard(style="background: #1a66af;")
+				.container-fluid
+					.row.justify-content-center
+						.col-md-10
+							.title.text-center: span Category:
+							.content-title
+								span Virtual Learning Communities
+			.container-fluid.container-category
+				.row.justify-content-center
+					.col-10.col-md-11
+						.row.justify-content-center.justify-content-md-start
+							-for(var i = 1; i <= 6; i++)
+								.col-md-6.col-12
+									+blogItem({
+										imgName: 'avatar.jpg',
+										datetime: '2017-07-07',
+										time: '07/07/17',
+										name: 'by John Holland',
+										description: 'Why this effective and passionate teacher is leaving the classroom (for now)'
+									})
+					nav.navigation.pagination
+						.navigation-comments
+							a.prev.page-numbers(href='#') « Previous
+							span.page-numbers.current 1
+							a.page-numbers(href='#') 2
+							a.page-numbers(href='#') 3
+							a.page-numbers(href='#') 4
+							a.page-numbers(href='#') 5
+							a.page-numbers(href='#') 6
+							a.page-numbers(href='#') 7
+							a.next.page-numbers(href='#') Next »
+			include pug/template/_subscribe
+			include pug/template/_widget-menu
+		include pug/common/_footer

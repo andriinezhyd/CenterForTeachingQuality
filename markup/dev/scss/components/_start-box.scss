@@ -1,0 +1,64 @@
+.start-section {
+  font: 400 rem-calc(36)/1 $ff-mr-eaves;
+
+  @include media('≥phone') {
+    font-size: rem-calc(47);
+  }
+
+  @include media('≥tablet') {
+    font-size: rem-calc(57);
+  }
+
+  @include media('≥desktop') {
+    font-size: rem-calc(81);
+  }
+
+  p {
+    &:last-of-type {
+      margin-bottom: rem-calc(32);
+
+      @include media('≥tablet') {
+        margin-bottom: rem-calc(50);
+      }
+    }
+  }
+
+  .bg-holder {
+    display: flex;
+    flex-wrap: wrap;
+    padding: rem-calc(90) 0;
+    overflow: hidden;
+
+    @include media('≥tablet') {
+      padding: rem-calc(71) 0;
+      align-items: flex-end;
+    }
+  }
+
+  .btn {
+    color: $white;
+
+    &:hover {
+      text-shadow: 1px 0 0 $white;
+      background: rgba(242,242,242, .75);
+    }
+
+    &.btn-outline-warning {
+      color: $white;
+
+      &:focus {
+        box-shadow: none;
+      }
+    }
+  }
+
+  .text-box {
+    @include media('≥tablet') {
+      padding-right: 25%;
+    }
+  }
+
+  .container-fluid {
+    max-height: 100%;
+  }
+}

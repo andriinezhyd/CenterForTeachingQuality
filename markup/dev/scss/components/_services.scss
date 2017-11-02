@@ -1,0 +1,80 @@
+.services-list {
+  @extend %listreset;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  margin: 0;
+  padding: rem-calc(45) 0 rem-calc(17);
+
+  @include media('≥phone') {
+    margin: 0 rem-calc(12);
+  }
+
+  @include media('≥tablet') {
+    margin: 0 rem-calc(5);
+  }
+
+  @include media('≥desktop') {
+    margin: 0 rem-calc(-25);
+    padding: rem-calc(32) 0 rem-calc(17);
+  }
+
+  li {
+    width: 100%;
+    overflow: hidden;
+    padding: 0 rem-calc(20) rem-calc(30);
+
+    @include media('≥phone') {
+      width: 50%;
+      padding: 0 rem-calc(20) rem-calc(20);
+    }
+
+    @include media('≥tablet') {
+      width: 33.3%;
+      padding: 0 rem-calc(20) rem-calc(10);
+    }
+
+    @include media('≥desktop') {
+      width: 20%;
+      padding: 0 rem-calc(20) rem-calc(20);
+    }
+  }
+}
+
+.services-item {
+  font-size: rem-calc(13);
+  line-height: 17px;
+  // color: $gray;
+
+  h2 {
+    color: #231f20;
+    font: 300 21px/1.095 $base-font-sans-serif;
+
+    a {
+      color: inherit;
+
+      &:hover {
+        color: $blue;
+      }
+    }
+  }
+
+  .ico {
+    display: block;
+    height: rem-calc(48);
+    margin-bottom: rem-calc(13);
+
+    img {
+      height: 100%;
+      width: auto;
+    }
+  }
+
+  p {
+    margin-bottom: rem-calc(2);
+
+    @include media('≥desktop') {
+      margin-bottom: rem-calc(16);
+    }
+  }
+}

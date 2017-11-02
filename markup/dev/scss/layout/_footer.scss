@@ -1,0 +1,189 @@
+#footer {
+  background: $gray;
+  position: relative;
+  z-index: 2;
+}
+
+.footer-panel {
+  padding: rem-calc(47) 0 rem-calc(20);
+  color: $white;
+  font-size: rem-calc(21);
+  line-height: 25px;
+  font-weight: $light;
+
+  @include media('≥phone') {
+    padding: rem-calc(47) rem-calc(69) rem-calc(20);
+  }
+
+  @include media('≥tablet') {
+    padding: rem-calc(34) rem-calc(22) 0;
+  }
+
+  @include media('≥desktop') {
+    padding: rem-calc(34) 0 rem-calc(87);
+  }
+
+  .box {
+    margin-bottom: rem-calc(31);
+
+    @include media('≥tablet') {
+      margin-bottom: rem-calc(38);
+    }
+
+    @include media('≥desktop') {
+      margin-bottom: 0;
+    }
+  }
+
+  h2 {
+    margin: 0 0 rem-calc(20);
+    padding-bottom: rem-calc(6);
+    color: $white;
+    text-transform: uppercase;
+    line-height: 25px;
+    font-size: rem-calc(21);
+    font-weight: $bold;
+    font-family: $ff-mr-eaves;
+  }
+
+  a {
+    color: $yellow;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  .xmt {
+    .xmt_Primary {
+      > div > a {
+        color: $yellow;
+        text-transform: uppercase;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+
+    ul {
+      @extend %listreset;
+
+      a {
+        color: $white;
+
+        &:hover {
+          color: $yellow;
+        }
+      }
+    }
+  }
+
+  .address {
+    font-size: rem-calc(16);
+    line-height: 25px;
+    font-family: $ff-sofiapro;
+
+    > span {
+      display: block;
+    }
+
+    a {
+      color: $white;
+
+      &:hover {
+        color: $yellow;
+        text-decoration: underline;
+      }
+    }
+
+    [href*='mailto'] {
+      color: $yellow;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .social {
+    padding-top: rem-calc(5);
+    margin-bottom: rem-calc(30);
+
+    li {
+      @include media('<desktop') {
+        margin-right: rem-calc(20);
+      }
+    }
+
+    a {
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+.footer-bar {
+  padding: rem-calc(9) 0;
+  color: #505151;
+  font-size: rem-calc(14);
+  line-height: 18px;
+  text-align: center;
+  font-weight: $normal;
+  font-family: $ff-sofiapro;
+  background: $yellow;
+
+  @include media('≥tablet') {
+    padding: rem-calc(14) 0;
+  }
+
+  p {
+    margin: 0;
+  }
+
+  a {
+    color: inherit;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  .active {
+    a {
+      text-decoration: underline;
+    }
+  }
+
+  .separator {
+    margin: 0 rem-calc(10);
+  }
+}
+
+.menu-footer {
+  @extend %listreset;
+  display: inline;
+
+  @include media('<tablet') {
+    display: block;
+  }
+
+  li {
+    display: inline;
+
+    &:before {
+      display: inline;
+      content: '|';
+      margin: 0 rem-calc(10) 0 rem-calc(8);
+    }
+
+    &:first-child {
+      @include media('<tablet') {
+        &:before {
+          display: none;
+        }
+      }
+    }
+  }
+}
